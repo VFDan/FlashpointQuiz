@@ -10,6 +10,7 @@
     right: 0;
     margin: 0;
     padding: 0;
+    transition: opacity 0.9s;
 }
 #loading > div#loading_img_wrapper {
     width: 100%;
