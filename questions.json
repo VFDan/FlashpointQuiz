@@ -1,6 +1,7 @@
 [
     {
         "number": 1,
+        "author": "de_ultimate",
         "topic": "Games",
         "questionText": "What was the first game curated on Flashpoint?",
         "questionImage": null,
@@ -10,17 +11,64 @@
     {
         "number": 2,
         "topic": "Plugins",
+        "author": "de_ultimate",
         "questionText": "Which technology is used to run this \"Diner Dash\" game?",
-        "questionImage": "2.png",
-        "responses": ["Flash", "Silverlight ", "Shockwave", "ActiveX"],
+        "questionImage": "/questionImages/2.png",
+        "responses": ["Flash", "Silverlight", "Shockwave", "ActiveX"],
         "answer": "c"
     },
     {
         "number": 3,
         "topic": "Plugins",
-        "questionText": "What was the <b>second</b> plugin added to Flashpoint",
+        "author": "VFDan",
+        "questionText": "What was the <b>second</b> plugin added to Flashpoint?",
         "questionImage": null,
         "responses": ["Shockwave", "Flash", "HTML5", "Java"],
+        "answer": "a"
+    },
+    {
+        "number": 4,
+        "topic": "Games",
+        "author": "VFDan",
+        "questionText": "As of June 2022, what is the most played game on Flashpoint (by number of plays)?",
+        "questionImage": null,
+        "responses": ["Bowman", "Poptropica", "Jacksmith", "Monopoly"],
+        "answer": "b"
+    },
+    {
+        "number": 5,
+        "topic": "Flashpoint Project",
+        "author": "VFDan",
+        "questionText": "What year was the project created in?",
+        "questionImage": null,
+        "responses": ["2015", "2010", "2018", "2017"],
+        "answer": "d"
+    },
+    {
+        "number": 6,
+        "topic": "Plugins",
+        "author": "VFDan",
+        "questionText": "Who wrote the iconic <i>Thoughts on Flash</i>, thought to have been a turning point leading to Flash's demise?",
+        "questionImage": null,
+        "responses": ["Tim Cook", "Steve Jobs", "Shantanu Narayen", "Mark Zuckerberg"],
+        "answer": "b"
+    },
+    {
+        "number": 7,
+        "topic": "Plugins",
+        "author": "VFDan",
+        "questionText": "What company created Silverlight?",
+        "questionImage": "https://bluemaxima.org/flashpoint/datahub/images/6/60/Silverlight_Logo.png",
+        "responses": ["Netflix", "Adobe", "BlueMaxima", "Microsoft"],
+        "answer": "d"
+    },
+    {
+        "number": 8,
+        "topic": "Plugins",
+        "author": "NightHnh099",
+        "questionText": "When was Silverlight fully deprecated?",
+        "questionImage": null,
+        "responses": ["2021", "2017", "2007", "2000"],
         "answer": "a"
     }
 ]
