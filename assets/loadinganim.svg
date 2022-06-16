@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(255, 255, 255, 0) none repeat scroll 0% 0%; display: block; shape-rendering: auto;" width="247px" height="247px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: rgba(255, 255, 255, 0) none repeat scroll 0% 0%; display: block; shape-rendering: auto;" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
 <g transform="translate(50 42)">
-  <g transform="scale(0.8)">
+  <g transform="scale(1)">
     <g transform="translate(-50 -50)">
       <polygon fill="#e15b64" points="72.5 50 50 11 27.5 50 50 50">
         <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1100ms" values="0 50 38.5;360 50 38.5" keyTimes="0;1"></animateTransform>
