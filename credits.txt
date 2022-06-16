@@ -1,1 +1,1 @@
-icon 'triangles' from loading.io
+icon 'triangles' from loading.io, and edited
