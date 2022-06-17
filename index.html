@@ -15,10 +15,19 @@
     </head>
     <body>
         <div id="loading">
-            <div id="loading_img_wrapper"><img src="assets/loadinganim.svg" alt="Loading..." /></div>
+            <div id="loading_img_wrapper">
+                <img src="assets/loadinganim.svg" alt="Loading..." />
+            </div>
         </div>
-        <button onclick="newQuestion()">New Question</button>
-        <div id="testingOutput"></div>
+        <div id="page">
+            <header>
+                <h2 id="quiz_title">Flashpoint Quiz</h2>
+                <h2 id="question_num">Question Number</h2>
+            </header>
+            <main>
+                <h1 id="question_text"></h1>
+            </main>
+        </div>
         <script src="main.js"></script>
     </body>
 </html>

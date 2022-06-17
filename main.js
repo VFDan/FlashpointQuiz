@@ -1,5 +1,6 @@
 var questions;
 const CHARTOARRAY = {"a": 0, "b": 1, "c": 2, "d": 3, "e": 4};
+
 async function init() {
     var startTime = Date.now();
     response = await fetch("./questions.json");
@@ -12,8 +13,9 @@ async function init() {
 
 function newQuestion() {
     var questionNumber = Math.floor(Math.random() * questions.length) + 1;
-    var currentQuestion = questions[questionNumber - 1]
-    document.getElementById('testingOutput').innerHTML += `<br> ${currentQuestion['number']}. ${currentQuestion['responses'][CHARTOARRAY[currentQuestion['answer']]]}`;
+    var currentQuestion = questions[questionNumber - 1];
+    document.getElementById("question_num").innerHTML = "Question " + questionNumber;
+    document.getElementById("question_text").innerHTML = currentQuestion['questionText'];
 }
 
 function fadeOutLoading() {

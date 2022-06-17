@@ -21,7 +21,7 @@
         "number": 3,
         "topic": "Plugins",
         "author": "VFDan",
-        "questionText": "What was the <b>second</b> plugin added to Flashpoint?",
+        "questionText": "What was the <strong>second</strong> plugin added to Flashpoint?",
         "questionImage": null,
         "responses": ["Shockwave", "Flash", "HTML5", "Java"],
         "answer": "a"

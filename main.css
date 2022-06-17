@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
     transition: opacity 0.9s;
+    overflow: hidden;
 }
 #loading > div#loading_img_wrapper {
     width: 100%;
@@ -25,3 +26,44 @@
     height: auto;
     margin: 0;
 }
+/* END LOADING */
+
+* { font-family: Verdana, Geneva, Tahoma, sans-serif; }
+body {
+    margin: 0;
+    padding: 0;
+}
+#page {
+    background-color: firebrick;
+    color: whitesmoke;
+    min-height: 100vh;
+}
+header {
+    clear: both;
+    padding: 0 10px;
+}
+#quiz_title {
+    float: left;
+    margin-top: 1rem;
+}
+#question_num {
+    float: right;
+    text-decoration: underline;
+    margin-top: 1rem;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 100vw;
+    flex-direction: column;
+}
+#question_text {
+    margin-top: 0;
+    text-align: center;
+    padding: 0 20vw;
+    font-size: 4rem;
+    font-weight: normal;
+}
+strong {font-weight: bold;}
