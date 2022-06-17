@@ -34,13 +34,19 @@ body {
     padding: 0;
 }
 #page {
-    background-color: firebrick;
+    background-color: #b22222;
     color: whitesmoke;
     min-height: 100vh;
 }
 header {
+    background: #580101;
+    background: -moz-linear-gradient(180deg, #580101 15%, #b22222 90%);
+    background: -webkit-linear-gradient(180deg, #580101 15%, #b22222 90%);
+    background: linear-gradient(180deg, #580101 15%, #b22222 90%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#580101",endColorstr="#b22222",GradientType=1); 
     clear: both;
     padding: 0 10px;
+    margin: 0;
 }
 #quiz_title {
     float: left;
