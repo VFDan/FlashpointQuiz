@@ -15,7 +15,16 @@ function newQuestion() {
     var questionNumber = Math.floor(Math.random() * questions.length) + 1;
     var currentQuestion = questions[questionNumber - 1];
     document.getElementById("question_num").innerHTML = "Question " + questionNumber;
+    document.getElementById("question_topic").innerHTML = "Topic: " + currentQuestion['topic'];
+    document.getElementById("question_author").innerHTML = "Author: " + currentQuestion['author'];
     document.getElementById("question_text").innerHTML = currentQuestion['questionText'];
+
+    if (currentQuestion['questionImage']) {
+        document.getElementById("question_img").src = currentQuestion['questionImage'];
+        document.getElementById("question_img").style.display = "block";
+    } else {
+        document.getElementById("question_img").style.display = "none";
+    }
 }
 
 function fadeOutLoading() {
