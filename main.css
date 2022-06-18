@@ -39,16 +39,23 @@ body {
     color: whitesmoke;
     min-height: 100vh;
 }
-header {
-    background: #580101;
-    background: -moz-linear-gradient(180deg, #580101 15%, #b22222 90%);
-    background: -webkit-linear-gradient(180deg, #580101 15%, #b22222 90%);
-    background: linear-gradient(180deg, #580101 15%, #b22222 90%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#580101",endColorstr="#b22222",GradientType=1); 
+header, footer {
     padding: 0 10px;
     margin: 0;
     display: flex;
     justify-content: space-between;
+}
+header {
+    background: #580101;
+    background: -moz-linear-gradient(180deg, #580101 15%, #b22222 90%);
+    background: -webkit-linear-gradient(180deg, #580101 15%, #b22222 90%);
+    background: linear-gradient(180deg, #580101 15%, #b22222 90%); 
+}
+footer {
+    background: #580101;
+    background: -moz-linear-gradient(0deg, #580101 15%, #b22222 90%);
+    background: -webkit-linear-gradient(0deg, #580101 15%, #b22222 90%);
+    background: linear-gradient(0deg, #580101 15%, #b22222 90%); 
 }
 #question_num {
     text-decoration: underline;
@@ -77,6 +84,9 @@ main {
 }
 #question_img {
     flex-grow: 9;
+}
+a {
+    color: #368FFF!important;
 }
 @media only screen and (max-width: 600px) {
   #actual_question {
