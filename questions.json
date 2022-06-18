@@ -1,7 +1,7 @@
 [
     {
         "number": 1,
-        "author": "de_ultimate",
+        "author": "ultimate",
         "topic": "Games",
         "questionText": "What was the first game curated on Flashpoint?",
         "questionImage": null,
@@ -11,7 +11,7 @@
     {
         "number": 2,
         "topic": "Plugins",
-        "author": "de_ultimate",
+        "author": "ultimate",
         "questionText": "Which technology is used to run this \"Diner Dash\" game?",
         "questionImage": "/questionImages/2.png",
         "responses": ["Flash", "Silverlight", "Shockwave", "ActiveX"],
@@ -70,5 +70,14 @@
         "questionImage": null,
         "responses": ["2021", "2017", "2007", "2000"],
         "answer": "a"
+    },
+    {
+        "number": 9,
+        "topic": "Games",
+        "author": "VFDan",
+        "questionText": "Which technology is used to run this \"Atomaders\" game?",
+        "questionImage": "/questionImages/9.png",
+        "responses": ["Flash",  "ActiveX", "Shockwave", "Vitalize"],
+        "answer": "b"
     }
 ]
