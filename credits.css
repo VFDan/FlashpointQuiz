@@ -12,7 +12,7 @@ header, footer {
     padding: 0 10px;
     margin: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 header {
     background: #580101;
@@ -24,8 +24,15 @@ footer {
     background: #580101;
     background: -moz-linear-gradient(0deg, #580101 15%, #b22222 90%);
     background: -webkit-linear-gradient(0deg, #580101 15%, #b22222 90%);
-    background: linear-gradient(0deg, #580101 15%, #b22222 90%); 
+    background: linear-gradient(0deg, #580101 15%, #b22222 90%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 a {
-    color: #368FFF!important;
+    color: #FCFFAB !important;
+}
+main {
+    font-size: 1.5rem;
 }

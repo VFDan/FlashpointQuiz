@@ -71,6 +71,7 @@ main {
     width: 100vw;
     flex-direction: column;
     flex-grow: 5;
+    z-index: 1;
 }
 #actual_question {
     display: flex;
@@ -102,14 +103,23 @@ main {
 }
 #answers div {
     background-color: #368FFF;
-    border-radius: 5%;
+    border-radius: 1em;
     font-size: 4em;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition-duration: 0.4s;
+}
+#answers div:hover {
+    background-color: #227BEB;
+    cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#answers div:active {
+    transform: translateY(4px);
 }
 a {
-    color: #368FFF!important;
+    color: #FCFFAB !important;
 }
 @media only screen and (max-width: 600px) {
     #actual_question {
