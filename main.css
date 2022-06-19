@@ -112,10 +112,15 @@ a {
     color: #368FFF!important;
 }
 @media only screen and (max-width: 600px) {
-  #actual_question {
-    flex-wrap: wrap;
-  }
-  #question_text {
-    font-size: 3rem;
-  }
+    #actual_question {
+        flex-wrap: wrap;
+    }
+    #question_text {
+        font-size: 3rem;
+    }
+    #answers {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 90%;
+    }
 }
