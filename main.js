@@ -5,9 +5,13 @@ const ARRAYTOCHAR = ["a", "b", "c", "d"];
 
 async function init() {
     var startTime = Date.now();
-    response = await fetch("./questions.json");
-    questions = await response.json();
+    do {
+        response = await fetch("./questions.json");
+        questions = await response.json();
+    } while (questions == undefined);
     newQuestion();
+    var longestStreak = localStorage.getItem('longestStreak') || 0;
+    document.getElementById('longest_streak').innerHTML = "Longest Streak: " + longestStreak;
     if (Date.now() - startTime < 500) {
         setTimeout(fadeOutLoading(), 500); // Timeout so loading doesn't immediately disappear
     } else fadeOutLoading();
@@ -19,7 +23,6 @@ function newQuestion() {
     var questionNumber = 0;
     do {
         questionNumber = Math.floor(Math.random() * questions.length) + 1;
-        console.log(questionNumber, previousQuestion); //Logging stuff such as "4 -1"
     } while (questionNumber == previousQuestion); // Don't get the same question twice in a row
     previousQuestion = questionNumber;
 
@@ -59,14 +62,13 @@ function submitAnswer(answerSubmitted) {
         if (answerSubmitted != correctAnswer) {
             document.getElementById("answer_" + answerSubmitted).classList += " incorrect";
             try {
-                var longestStreak = localStorage.getItem('longestStreak').parseInt() || 0;
+                var longestStreak = localStorage.getItem('longestStreak') || 0;
                 if (correct > longestStreak) {
-                    localStorage.setItem('longestStreak', correct)
+                    localStorage.setItem('longestStreak', correct);
+                    document.getElementById("longest_streak").innerHTML = "Longest Streak: " + correct;
                 }
             } catch (SecurityError) {
-                
-            } finally {
-                document.getElementById("longest_streak").innerHTML = "Longest Streak:" + correct;
+                alert("Longest streak does not work due to lack of LocalStorage permissions.");
             }
             correct = 0;
         } else { correct++; }
@@ -74,3 +76,9 @@ function submitAnswer(answerSubmitted) {
         questionAnswered = true;
     }
 }
+
+document.body.addEventListener("keydown", function (e) {
+    if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
+        newQuestion();
+    }
+});
