@@ -1,5 +1,5 @@
-var questions;
-const CHARTOARRAY = {"a": 0, "b": 1, "c": 2, "d": 3};
+var questions, currentQuestion, questionAnswered;
+const ARRAYTOCHAR = ["a", "b", "c", "d"];
 
 async function init() {
     var startTime = Date.now();
@@ -12,8 +12,9 @@ async function init() {
 }
 
 function newQuestion() {
+    questionAnswered = false;
     var questionNumber = Math.floor(Math.random() * questions.length) + 1;
-    var currentQuestion = questions[questionNumber - 1];
+    currentQuestion = questions[questionNumber - 1];
     document.getElementById("question_num").innerHTML = "Question " + questionNumber;
     document.getElementById("question_topic").innerHTML = "Topic: " + currentQuestion['topic'];
     document.getElementById("question_author").innerHTML = "Author: " + currentQuestion['author'];
@@ -26,12 +27,11 @@ function newQuestion() {
         document.getElementById("question_img").style.display = "none";
     }
 
-    document.getElementById("answer_a").lastChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['a']];
-    document.getElementById("answer_b").lastChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['b']];
-    document.getElementById("answer_c").lastChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['c']];
-    document.getElementById("answer_d").lastChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['d']];
-
-    document.getElementById("answer_" + currentQuestion['answer']).setAttribute('data-answer', 'data-answer');
+    for(var i = 0; i < ARRAYTOCHAR.length; i++) {
+        var elementId = "answer_" + ARRAYTOCHAR[i];
+        document.getElementById(elementId).lastElementChild.innerHTML = currentQuestion['responses'][i];
+        document.getElementById(elementId).classList = "answer";
+    }
 }
 
 function fadeOutLoading() {
@@ -41,3 +41,14 @@ function fadeOutLoading() {
 }
 
 init();
+
+function submitAnswer(answerSubmitted) {
+    var correctAnswer = currentQuestion['answer'];
+    if (!questionAnswered) {
+        document.getElementById("answer_" + correctAnswer).classList += " correct"
+        if (answerSubmitted != correctAnswer) {
+            document.getElementById("answer_" + answerSubmitted).classList += " incorrect"
+        }
+        questionAnswered = true;
+    }
+}
