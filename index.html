@@ -28,27 +28,34 @@
                 <h2 id="question_num">Question Number</h2>
             </header>
             <main>
-                <div id="actual_question">
-                    <h1 id="question_text">Question still loading...</h1>
-                    <img src="" id="question_img" alt="Image for Question" style="display: none;" />
+                <div id="questions_wrapper">
+                    <div id="new_question" class="button" onmouseup="newQuestion();">New Question</div>
+                    <div id="actual_question">
+                        <h1 id="question_text">Question still loading...</h1>
+                        <img src="" id="question_img" alt="Image for Question" style="display: none;" />
+                    </div>
+                    <div id="correct_streak">
+                        <p id="current_streak">Current Streak: 0</p>
+                        <p id="longest_streak">Longest Streak: 0</p>
+                    </div>
                 </div>
                 <div id="answers">
-                    <div class="answer" id="answer_a" onclick="submitAnswer('a')">
+                    <div class="answer button" id="answer_a" onclick="submitAnswer('a')">
                         <svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M100 0 L0 100 ' stroke='red'/><path d='M0 0 L100 100 ' stroke='red'/></svg>
                         <p class="choice_letter">A</p>
                         <p class="choice_text"></p>
                     </div>
-                    <div class="answer" id="answer_b" onclick="submitAnswer('b')">
+                    <div class="answer button" id="answer_b" onclick="submitAnswer('b')">
                         <svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M100 0 L0 100 ' stroke='red'/><path d='M0 0 L100 100 ' stroke='red'/></svg>
                         <p class="choice_letter">B</p>
                         <p class="choice_text"></p>
                     </div>
-                    <div class="answer" id="answer_c" onclick="submitAnswer('c')">
+                    <div class="answer button" id="answer_c" onclick="submitAnswer('c')">
                         <svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M100 0 L0 100 ' stroke='red'/><path d='M0 0 L100 100 ' stroke='red'/></svg>
                         <p class="choice_letter">C</p>
                         <p class="choice_text"></p>
                     </div>
-                    <div class="answer" id="answer_d" onclick="submitAnswer('d')">
+                    <div class="answer button" id="answer_d" onclick="submitAnswer('d')">
                         <svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M100 0 L0 100 ' stroke='red'/><path d='M0 0 L100 100 ' stroke='red'/></svg>
                         <p class="choice_letter">D</p>
                         <p class="choice_text"></p>
