@@ -40,7 +40,7 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background-image: url("/assets/fplogo_black.png");
+    background-image: url("assets/fplogo_black.png");
     background-repeat: space;
     background-size: contain;
     background-position: center;
