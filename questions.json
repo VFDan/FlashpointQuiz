@@ -13,7 +13,7 @@
         "topic": "Plugins",
         "author": "ultimate",
         "questionText": "Which technology is used to run this \"Diner Dash\" game?",
-        "questionImage": "/questionImages/2.png",
+        "questionImage": "questionImages/2.png",
         "responses": ["Flash", "Silverlight", "Shockwave", "ActiveX"],
         "answer": "c"
     },
@@ -76,7 +76,7 @@
         "topic": "Games",
         "author": "VFDan",
         "questionText": "Which technology is used to run this \"Atomaders\" game?",
-        "questionImage": "/questionImages/9.png",
+        "questionImage": "questionImages/9.png",
         "responses": ["Flash",  "ActiveX", "Shockwave", "Vitalize"],
         "answer": "b"
     }
