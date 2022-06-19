@@ -26,10 +26,10 @@ function newQuestion() {
         document.getElementById("question_img").style.display = "none";
     }
 
-    document.getElementById("answer_a").firstChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['a']];
-    document.getElementById("answer_b").firstChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['b']];
-    document.getElementById("answer_c").firstChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['c']];
-    document.getElementById("answer_d").firstChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['d']];
+    document.getElementById("answer_a").lastChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['a']];
+    document.getElementById("answer_b").lastChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['b']];
+    document.getElementById("answer_c").lastChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['c']];
+    document.getElementById("answer_d").lastChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['d']];
 
     document.getElementById("answer_" + currentQuestion['answer']).setAttribute('data-answer', 'data-answer');
 }

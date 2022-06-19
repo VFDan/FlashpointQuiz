@@ -101,14 +101,21 @@ main {
     grid-gap: 20px;
     margin-top: 10px;
 }
+.choice_letter { 
+    position: absolute;
+    top: -0.9em;
+    left: 0.3em;
+}
 #answers div {
     background-color: #368FFF;
     border-radius: 1em;
     font-size: 4em;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-duration: 0.4s;
+    transition-duration: 0.4s, 0.4s, 0.1s;
+    transition-property: background-color, box-shadow, transform;
 }
 #answers div:hover {
     background-color: #227BEB;
