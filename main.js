@@ -1,5 +1,5 @@
 var questions;
-const CHARTOARRAY = {"a": 0, "b": 1, "c": 2, "d": 3, "e": 4};
+const CHARTOARRAY = {"a": 0, "b": 1, "c": 2, "d": 3};
 
 async function init() {
     var startTime = Date.now();
@@ -25,6 +25,13 @@ function newQuestion() {
     } else {
         document.getElementById("question_img").style.display = "none";
     }
+
+    document.getElementById("answer_a").firstChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['a']];
+    document.getElementById("answer_b").firstChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['b']];
+    document.getElementById("answer_c").firstChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['c']];
+    document.getElementById("answer_d").firstChild.innerHTML = currentQuestion['responses'][CHARTOARRAY['d']];
+
+    document.getElementById("answer_" + currentQuestion['answer']).setAttribute('data-answer', 'data-answer');
 }
 
 function fadeOutLoading() {
