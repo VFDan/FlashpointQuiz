@@ -9,7 +9,14 @@ async function init() {
         response = await fetch("./questions.json");
         questions = await response.json();
     } while (questions == undefined);
-    newQuestion();
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('question')) {
+        var questionFromUrl = urlParams.get('question');
+        if (questionFromUrl > questions.length) {
+            console.log("Question is out of range.")
+            newQuestion();
+        } else newQuestion(questionFromUrl);
+    } else newQuestion();
     var longestStreak = localStorage.getItem('longestStreak') || 0;
     document.getElementById('longest_streak').innerHTML = "Longest Streak: " + longestStreak;
     if (Date.now() - startTime < 500) {
@@ -17,13 +24,17 @@ async function init() {
     } else fadeOutLoading();
 }
 
-function newQuestion() {
+function newQuestion(fromURL = null) {
     questionAnswered = false;
 
     var questionNumber = 0;
-    do {
-        questionNumber = Math.floor(Math.random() * questions.length) + 1;
-    } while (questionNumber == previousQuestion); // Don't get the same question twice in a row
+    if (!fromURL) {
+        do {
+            questionNumber = Math.floor(Math.random() * questions.length) + 1;
+        } while (questionNumber == previousQuestion); // Don't get the same question twice in a row
+    } else {
+        questionNumber = fromURL;
+    }
     previousQuestion = questionNumber;
 
     currentQuestion = questions[questionNumber - 1];
@@ -31,6 +42,7 @@ function newQuestion() {
     document.getElementById("question_topic").innerHTML = "Topic: " + currentQuestion['topic'];
     document.getElementById("question_author").innerHTML = "Author: " + currentQuestion['author'];
     document.getElementById("question_text").innerHTML = currentQuestion['questionText'];
+    document.getElementById("question_img").src = ''; //While image loads, show alt text
 
     if (currentQuestion['questionImage']) {
         document.getElementById("question_img").src = currentQuestion['questionImage'];
@@ -67,8 +79,8 @@ function submitAnswer(answerSubmitted) {
                     localStorage.setItem('longestStreak', correct);
                     document.getElementById("longest_streak").innerHTML = "Longest Streak: " + correct;
                 }
-            } catch (SecurityError) {
-                alert("Longest streak does not work due to lack of LocalStorage permissions.");
+            } catch (e) {
+                if (e instanceof DOMException) alert("Longest streak does not work due to lack of LocalStorage permissions.");
             }
             correct = 0;
         } else { correct++; }
