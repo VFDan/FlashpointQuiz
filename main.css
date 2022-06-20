@@ -136,6 +136,7 @@ main {
 }
 #question_img {
     flex-grow: 9;
+    margin-left: 0.25rem; /* Don't be right next to image */
 }
 /* END QUESTION */
 .button {
