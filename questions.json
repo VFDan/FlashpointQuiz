@@ -79,5 +79,86 @@
         "questionImage": "questionImages/9.png",
         "responses": ["Flash",  "ActiveX", "Shockwave", "Vitalize"],
         "answer": "b"
+    }, 
+    {
+        "number": 10,
+        "topic": "Games",
+        "author": "testunstop",
+        "questionText": "Which technology is used to run this \"Sniper Team\" game?",
+        "questionImage": "questionImages/10.png",
+        "responses": ["Shockwave", "Alambik", "Unity", "Flash"],
+        "answer": "d" 
+    },
+    {
+        "number": 11,
+        "topic": "Plugins",
+        "author": "Rocko Rotten",
+        "questionText": "Which company created DeepV and Play3D?",
+        "questionImage": "https://bluemaxima.org/flashpoint/datahub/images/4/4e/DeepV_Logo.png",
+        "responses": ["Heads Off", "Oracle", "Project Development", "Apple"],
+        "answer": "a"
+    },
+    {
+        "number": 12,
+        "topic": "Flashpoint Project",
+        "author": "CrazyNaut",
+        "questionText": "Approximately how many games are featured in the Flashpoint Super Hall of Fame?",
+        "questionImage": null,
+        "responses": ["100", "200", "500", "1000"],
+        "answer": "c"
+    },
+    {
+        "number": 13,
+        "topic": "Flashpoint Project",
+        "author": "Greett",
+        "questionText": "As of Flashpoint 10.1, how many playlists are come with Flashpoint?",
+        "questionImage": null,
+        "responses": ["0", "2", "17", "25"],
+        "answer": "d"
+    },
+    {
+        "number": 14,
+        "topic": "Flashpoint Project",
+        "author": "CrazyNaut",
+        "questionText": "How many games were in the first edition of Flashpoint, Flashpoint Zero?",
+        "questionImage": null,
+        "responses": ["1", "21", "33", "52"],
+        "answer": "d"
+    },
+    {
+        "number": 15,
+        "topic": "Plugins",
+        "author": "Walker21232123",
+        "questionText": "What is HotSauce's codename?",
+        "questionImage": "https://bluemaxima.org/flashpoint/datahub/images/2/28/HotSauce_Logo.png",
+        "responses": ["Project Y", "Project X", "Project H", "Project RR"],
+        "answer": "b"
+    },
+    {
+        "number": 16,
+        "topic": "Plugins",
+        "author": "VFDan",
+        "questionText": "Which of these plugins has the least amount of games out of any plugin?",
+        "questionImage": null,
+        "responses": ["Play3D", "ProtoPlay", "GoBit", "Hyper-G"],
+        "answer": "a"
+    },
+    {
+        "number": 17,
+        "topic": "Flashpoint Project",
+        "author": "VFDan",
+        "questionText": "Who is famous for curating a lot of games in one go?",
+        "questionImage": null,
+        "responses": ["discorduser2000", "BlueMaxima", "DarkMoe", "Dri0m"],
+        "answer": "c"
+    },
+    {
+        "number": 18,
+        "topic": "Plugins",
+        "author": "VFDan",
+        "questionText": "Which company created the Hotsauce plugin?",
+        "questionImage": "https://bluemaxima.org/flashpoint/datahub/images/2/28/HotSauce_Logo.png",
+        "responses": ["Apple", "Cycore", "Scriptics", "Waterloo Maple"],
+        "answer": "a"
     }
 ]
