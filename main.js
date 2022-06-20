@@ -97,5 +97,21 @@ function copyQuestionLink() {
 document.body.addEventListener("keydown", function (e) {
     if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
         newQuestion();
+    } else if (e.code === "KeyA") {
+        document.getElementById("answer_a").classList.add('active_answer');
+        document.getElementById("answer_a").click();
+        setTimeout(function() {document.getElementById("answer_a").classList.remove('active_answer')}, 100);
+    } else if (e.code === "KeyB") {
+        document.getElementById("answer_b").classList.add('active_answer');
+        document.getElementById("answer_b").click();
+        setTimeout(function() {document.getElementById("answer_b").classList.remove('active_answer')}, 100);
+    } else if (e.code === "KeyC") {
+        document.getElementById("answer_c").classList.add('active_answer');
+        document.getElementById("answer_c").click();
+        setTimeout(function() {document.getElementById("answer_c").classList.remove('active_answer')}, 100);
+    } else if (e.code === "KeyD") {
+        document.getElementById("answer_d").classList.add('active_answer');
+        document.getElementById("answer_d").click();
+        setTimeout(function() {document.getElementById("answer_d").classList.remove('active_answer')}, 100);
     }
 });

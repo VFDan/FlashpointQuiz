@@ -101,6 +101,7 @@ main {
     padding: 0 1vw;
     align-content: center;
     flex-grow: 2;
+    min-width: 95vw;
 }
 #new_question, #correct_streak {
     background-color: #222;
@@ -149,7 +150,8 @@ main {
     cursor: pointer;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
-.button:active {
+.button:active, .active_answer {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     transform: translateY(4px);
 }
 /* BEGIN ANSWERS */
