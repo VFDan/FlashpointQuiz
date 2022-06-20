@@ -89,6 +89,11 @@ function submitAnswer(answerSubmitted) {
     }
 }
 
+function copyQuestionLink() {
+    var linkToQuestion = location.protocol + '//' + location.host + location.pathname + "?question=" + currentQuestion['number'];
+    navigator.clipboard.writeText(linkToQuestion).then(function() {console.log("Successfully copied")}, function(err) {alert("Copying text to clipboard failed."); console.error('Async: Could not copy text: ', err);});
+}
+
 document.body.addEventListener("keydown", function (e) {
     if (e.code === "Enter") {  //checks whether the pressed key is "Enter"
         newQuestion();
